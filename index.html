@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 01</title>
+</head>
+<body>
+<script>
+  function Student(name, address, phone, course) {
+    this.name = name;
+    this.address = address;
+    this.phone = phone;
+    this.course = course;
+
+    Student.prototype.getInfo = function() {
+      return "Name: " + this.name + "\n" +
+              "Address: " + this.address + "\n" +
+              "Phone: " + this.phone + "\n" +
+              "Course: " + this.course;
+    }
+  }
+
+  var student1 = new Student("Violeta Milenkovic", "Ljubomira Nikolica 15", "061 / 61 61 61", "JavaScript");
+  var student2 = new Student("Stefan Nedeljkovic", "Zelengorska 7", "062 / 62 62 62", "Web development");
+  var student3 = new Student("Danica Stojanovic", "Branka Krsmanovica 44", "063 / 63 63 63", "Web design");
+
+  var student1GetInfo = student1.getInfo();
+  var student2GetInfo = student2.getInfo();
+  var student3GetInfo = student3.getInfo();
+
+  console.log(student1GetInfo);
+  console.log(student2GetInfo);
+  console.log(student3GetInfo);
+</script>
+</body>
+</html>
